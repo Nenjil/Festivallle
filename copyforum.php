@@ -7,8 +7,20 @@ if(isset($_POST['connect'])) {
    $mail = $_POST['mail'];
    $mdp = sha1($_POST['mdp']);
    if(!empty($mail) AND !empty($mdp)) {
+
+
+
+      
       $requser = $bdh->prepare("SELECT * FROM kurisu WHERE mail = ? AND mdp = ?");
       $requser->execute(array($mail, $mdp));
+
+
+      $sujet = $dbh->query('SELECT Sujet FROM forum_affiche WHERE id="'.$tableau.'"');
+      $sujet = $sujet->fetch();// permet d'afficher le sujet
+
+
+
+
       $userexist = $requser->rowCount();
       if($userexist == 1) {
          $userinfo = $requser->fetch();
