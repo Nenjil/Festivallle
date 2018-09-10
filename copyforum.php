@@ -11,18 +11,33 @@ if(isset($_POST['connect'])) {
 
 
 
-      $requser = $bdh->prepare("SELECT * FROM kurisu WHERE mail = ? AND mdp = ?");
+
+
+
+      $requser = $bd->prepare("");
       $requser->execute(array($mail, $mdp));
 
 
-      $sujet = $dbh->query('SELECT Sujet FROM forum_affiche WHERE id="'.$tableau.'"');
+      $sujet = $bd->query('');
       $sujet = $sujet->fetch();// permet d'afficher le sujet
 
 
 
-          $sql = 'SELECT * FROM forum_affiche LIMIT 0 , 30';
-          $sth = $dbh->query($sql);
+          $sql = '';
+          $sth = $bd->query($sql);
           $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+
+
+
+
+
+
+
+
 
       $userexist = $requser->rowCount();
       if($userexist == 1) {

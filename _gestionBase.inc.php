@@ -1,25 +1,10 @@
 <?php
-
+include_once("connect.php");
 // FONCTIONS DE CONNEXION
 
-function connect()
-{
-   $hote="localhost";
-   $login="festival";
-   $mdp="secret";
-   return mysql_connect($hote, $login, $mdp);
-}
 
-function selectBase($connexion)
-{
-     $bd = new PDO('mysql:host=127.0.0.1;dbname=forum', 'root', 'root');
-  // $bd="festival";
-   //$query="SET CHARACTER SET utf8";
-   // Modification du jeu de caractères de la connexion
-   //$res=mysql_query($query, $connexion);
-  // $ok=mysql_select_db($bd, $connexion);
-   //return $ok;
-}
+
+
 
 // FONCTIONS DE GESTION DES ÉTABLISSEMENTS
 
@@ -169,11 +154,19 @@ function obtenirNomGroupe($connexion, $id)
 // FONCTIONS RELATIVES AUX ATTRIBUTIONS
 
 // Teste la présence d'attributions pour l'établissement transmis
-function existeAttributionsEtab($connexion, $id)
+function existeAttributionsEtab($id)
 {
-   $req="select * From Attribution where idEtab='$id'";
-   $rsAttrib=mysql_query($req, $connexion);
-   return mysql_fetch_array($rsAttrib);
+
+   $req="select * From attribution where idEtab= ? ";
+//   $rsAttrib=mysql_query($req, $connexion);
+   //return mysql_fetch_array($rsAttrib);
+   $rsAttrib = $bd->prepare($req);
+   $rsAttrib->execute($id);
+$rsAttrib= $rsAttrib->fetch();
+
+
+
+   return $rsAttrib;
 }
 
 // Retourne le nombre de chambres occupées pour l'id étab transmis
