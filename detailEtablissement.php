@@ -1,12 +1,12 @@
 <?php
-
+include("connect.php");
 include("_debut.inc.php");
-include("_gestionBase.inc.php"); 
+include("_gestionBase.inc.php");
 include("_controlesEtGestionErreurs.inc.php");
 
 // CONNEXION AU SERVEUR MYSQL PUIS SÉLECTION DE LA BASE DE DONNÉES festival
 
-$connexion=connect();
+/*$connexion=connect();
 if (!$connexion)
 {
    ajouterErreur("Echec de la connexion au serveur MySql");
@@ -18,9 +18,9 @@ if (!selectBase($connexion))
    ajouterErreur("La base de données festival est inexistante ou non accessible");
    afficherErreurs();
    exit();
-}
+}*/
 
-$id=$_REQUEST['id'];  
+$id=$_REQUEST['id'];
 
 // OBTENIR LE DÉTAIL DE L'ÉTABLISSEMENT SÉLECTIONNÉ
 
@@ -39,9 +39,9 @@ $prenomResponsable=$lgEtab['prenomResponsable'];
 $nombreChambresOffertes=$lgEtab['nombreChambresOffertes'];
 
 echo "
-<table width='60%' cellspacing='0' cellpadding='0' align='center' 
+<table width='60%' cellspacing='0' cellpadding='0' align='center'
 class='tabNonQuadrille'>
-   
+
    <tr class='enTeteTabNonQuad'>
       <td colspan='3'>$nom</td>
    </tr>
@@ -85,7 +85,7 @@ class='tabNonQuadrille'>
       <td> Responsable: </td>
       <td>$civiliteResponsable&nbsp; $nomResponsable&nbsp; $prenomResponsable
       </td>
-   </tr> 
+   </tr>
    <tr class='ligneTabNonQuad'>
       <td> Offre: </td>
       <td>$nombreChambresOffertes&nbsp;chambre(s)</td>
