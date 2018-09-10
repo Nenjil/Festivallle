@@ -1,5 +1,5 @@
 <?php
-
+include_once("connect.php");
 include_once("_debut.inc.php");
 include_once("_gestionBase.inc.php");
 include_once("_controlesEtGestionErreurs.inc.php");
@@ -51,7 +51,7 @@ class='tabNonQuadrille'>
 
          // S'il existe déjà des attributions pour l'établissement, il faudra
          // d'abord les supprimer avant de pouvoir supprimer l'établissement
-			if (!existeAttributionsEtab($id))
+			if (!existeAttributionsEtab($bd, $id))
 			{
             echo "
             <td width='16%' align='center'>

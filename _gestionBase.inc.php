@@ -1,5 +1,5 @@
 <?php
-include_once("connect.php");
+
 // FONCTIONS DE CONNEXION
 
 
@@ -154,15 +154,15 @@ function obtenirNomGroupe($connexion, $id)
 // FONCTIONS RELATIVES AUX ATTRIBUTIONS
 
 // Teste la présence d'attributions pour l'établissement transmis
-function existeAttributionsEtab($id)
+function existeAttributionsEtab($bd,$id)
 {
 
-   $req="select * From attribution where idEtab= ? ";
+   $req="select * From attribution where idEtab='$id' ";
 //   $rsAttrib=mysql_query($req, $connexion);
    //return mysql_fetch_array($rsAttrib);
-   $rsAttrib = $bd->prepare($req);
-   $rsAttrib->execute($id);
-$rsAttrib= $rsAttrib->fetch();
+
+$rsAttrib = $bd->query($req);
+$rsAttrib = $rsAttrib->fetch();// permet d'afficher le sujet
 
 
 

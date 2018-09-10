@@ -5,7 +5,7 @@ session_start();
 
     try{ //tentative de connexion : on crÃ©e un objet de la classe PDO
     $bd = new PDO($dsn, $user, $pass);
-    
+
 }
 
     catch (PDOException $e){
