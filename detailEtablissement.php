@@ -10,7 +10,7 @@ $connexion=connect();
 if (!$connexion)
 {
    ajouterErreur("Echec de la connexion au serveur MySql");
-   aficherErreurs();
+   afficherErreurs();
    exit();
 }
 if (!selectBase($connexion))
