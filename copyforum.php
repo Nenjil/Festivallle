@@ -10,7 +10,7 @@ if(isset($_POST['connect'])) {
 
 
 
-      
+
       $requser = $bdh->prepare("SELECT * FROM kurisu WHERE mail = ? AND mdp = ?");
       $requser->execute(array($mail, $mdp));
 
@@ -20,6 +20,9 @@ if(isset($_POST['connect'])) {
 
 
 
+          $sql = 'SELECT * FROM forum_affiche LIMIT 0 , 30';
+          $sth = $dbh->query($sql);
+          $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
       $userexist = $requser->rowCount();
       if($userexist == 1) {
