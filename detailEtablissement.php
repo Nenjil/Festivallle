@@ -1,12 +1,10 @@
 <?php
-include("connect.php");
-include("_debut.inc.php");
-include("_gestionBase.inc.php");
-include("_controlesEtGestionErreurs.inc.php");
+include_once("include.php");
+
 
 // CONNEXION AU SERVEUR MYSQL PUIS SÉLECTION DE LA BASE DE DONNÉES festival
 
-/*$connexion=connect();
+$connexion=connect();
 if (!$connexion)
 {
    ajouterErreur("Echec de la connexion au serveur MySql");
@@ -18,7 +16,7 @@ if (!selectBase($connexion))
    ajouterErreur("La base de données festival est inexistante ou non accessible");
    afficherErreurs();
    exit();
-}*/
+}
 
 $id=$_REQUEST['id'];
 

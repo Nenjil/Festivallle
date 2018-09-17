@@ -1,18 +1,29 @@
 <?php
-include_once("connect.php");
-include_once("_debut.inc.php");
-include_once("_gestionBase.inc.php");
-include_once("_controlesEtGestionErreurs.inc.php");
+include_once("include.php");
+
 
 // CONNEXION AU SERVEUR MYSQL PUIS SÉLECTION DE LA BASE DE DONNÉES festival
 
+$connexion=connect();
+if (!$connexion)
+{
+   ajouterErreur("Echec de la connexion au serveur MySql");
+   afficherErreurs();
+   exit();
+}
+if (!selectBase($connexion))
+{
+   ajouterErreur("La base de données festival est inexistante ou non accessible");
+   afficherErreurs();
+   exit();
+}
+
 
 $sql = 'SELECT * FROM groupe';
-$sth = $bd->query($sql);
+$sth = $connexion->query($sql);
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-print_r($result);
-
+//<!--print_r($result);-->
 
 
 // AFFICHER L'ENSEMBLE DES ÉTABLISSEMENTS
@@ -29,33 +40,34 @@ class='tabNonQuadrille'>
 
    $req=obtenirReqEtablissements();
 
-            $rsEtab = $bd->query($req);
-            $rsEtab = $rsEtab->fetch();// permet d'afficher le sujet
+            $rsEtab = $connexion->query($req);
+            $rsEtab = $rsEtab->fetchAll(PDO::FETCH_ASSOC);// permet d'afficher le sujet
             $lgEtab=$rsEtab;
+            print_r($lgEtab);
    // BOUCLE SUR LES ÉTABLISSEMENTS
-   while ($lgEtab!=FALSE)
+foreach ($lgEtab as $row)
    {
-      $id=$lgEtab['id'];
-      $nom=$lgEtab['nom'];
+      $idx=$row['id'];
+      $nomx=$row['nom'];
       echo "
 		<tr class='ligneTabNonQuad'>
-         <td width='52%'>$nom</td>
+         <td width='52%'>$nomx</td>
 
          <td width='16%' align='center'>
-         <a href='detailEtablissement.php?id=$id'>
+         <a href='detailEtablissement.php?id=$idx'>
          Voir détail</a></td>
 
          <td width='16%' align='center'>
-         <a href='modificationEtablissement.php?action=demanderModifEtab&amp;id=$id'>
+         <a href='modificationEtablissement.php?action=demanderModifEtab&amp;id=$idx'>
          Modifier</a></td>";
 
          // S'il existe déjà des attributions pour l'établissement, il faudra
          // d'abord les supprimer avant de pouvoir supprimer l'établissement
-			if (!existeAttributionsEtab($bd, $id))
+			if (!existeAttributionsEtab($connexion, $idx))
 			{
             echo "
             <td width='16%' align='center'>
-            <a href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$id'>
+            <a href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$idx'>
             Supprimer</a></td>";
          }
          else
