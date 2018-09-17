@@ -72,11 +72,11 @@ if ($nbEtab!=0)
       $req=obtenirReqGroupesEtab($idEtab);
       $rsGroupe=$connexion->query($req);
           $lgGroupe=$rsGroupe->fetch();
-
       // BOUCLE SUR LES GROUPES (CHAQUE GROUPE EST AFFICHÉ EN LIGNE)
       while($lgGroupe!=FALSE)
       {
          $idGroupe=$lgGroupe['id'];
+
          $nomGroupe=$lgGroupe['nom'];
          echo "
          <tr class='ligneTabQuad'>
