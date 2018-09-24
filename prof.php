@@ -21,7 +21,7 @@ if (!selectBase($connexion))
 
 $sql = 'SELECT * FROM groupe';
 $sth = $connexion->query($sql);
-$result = $sth->fetchAll(PDO::FETCH_ASSOC);
+//$result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 //<!--print_r($result);-->
 
@@ -37,17 +37,25 @@ class='tabNonQuadrille'>
    <tr class='enTeteTabNonQuad'>
       <td colspan='4'>Etablissements</td>
    </tr>";
+
+
 $valeur=$_SESSION['name'];
+
+
+
+
+
+
+
    $req='SELECT * FROM etablissement WHERE nom='.$valeur.'  ';
-
-            $rsEtab = $connexion->query($req);
-
-print_r($rsEtab);
+   $requser = $connexion->prepare("SELECT * FROM etablissement WHERE nom= ?  ");
+   $requser->execute(array($valeur));
+    $sujet = $requser->fetch();
    // BOUCLE SUR LES ÉTABLISSEMENTS
 
 
-      $idx=$rsEtab['id'];
-      $nomx=$rsEtab['nom'];
+      $idx= $sujet['id'];
+      $nomx= $sujet['nom'];
       echo "
 		<tr class='ligneTabNonQuad'>
          <td width='52%'>$nomx</td>
@@ -76,7 +84,7 @@ print_r($rsEtab);
 			}
 			echo "
       </tr>";
-      $lgEtab=$rsEtab;
+      $lgEtab= $sujet;
 
    echo "
 
