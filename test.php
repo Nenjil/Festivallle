@@ -27,7 +27,6 @@ echo '
       </li>
     </ul>
   </div>
-  <div class="oui" style="width:100px;height:100px;background:red"></div>
 </nav>
 <br>';
 
