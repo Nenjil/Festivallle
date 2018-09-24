@@ -194,5 +194,5 @@ if ($action=='validerModifEtab')
       <h5 style='font-size:50px><center>La modification de l'établissement a été effectuée</center></h5>";
    }
 }
-
+include("footer.php");
 ?>

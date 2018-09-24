@@ -43,7 +43,6 @@ class='tabNonQuadrille'>
             $rsEtab = $connexion->query($req);
             $rsEtab = $rsEtab->fetchAll(PDO::FETCH_ASSOC);// permet d'afficher le sujet
             $lgEtab=$rsEtab;
-            print_r($lgEtab);
    // BOUCLE SUR LES ÉTABLISSEMENTS
 foreach ($lgEtab as $row)
    {
@@ -85,5 +84,5 @@ foreach ($lgEtab as $row)
       Création d'un établissement</a ></td>
   </tr>
 </table>";
-
+include("footer.php");
 ?>

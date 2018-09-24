@@ -3,8 +3,10 @@
 
 
      $(".navbar-toggler").on( "click", function() {
+$(".collapse").css({
 
-          $(this + ".m").toggleClass('up');
+})
+
         });
 
     });

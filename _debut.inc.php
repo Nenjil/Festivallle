@@ -1,7 +1,7 @@
 <?php
 
 echo '
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <!-- TITRE ET MENUS -->
 <html lang="fr">
@@ -15,7 +15,7 @@ echo '
 
 <!--  Tableau contenant le titre -->
 <table width="100%" cellpadding="0" cellspacing="0">
-   <tr> 
+   <tr>
       <td class="titre">Festival Folklores du Monde <br>
       <span id="texteNiveau2" class="texteNiveau2">
       H&eacute;bergement des groupes</span><br>&nbsp;
@@ -34,5 +34,4 @@ echo '
    </tr>
 </table>
 <br>';
-
-
+include("footer.php");

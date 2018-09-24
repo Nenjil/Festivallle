@@ -194,5 +194,5 @@ if ($action=='validerCreEtab')
       <h5 style='font-size:50px'><center>La création de l'établissement a été effectuée</center></h5>";
    }
 }
-
+include("footer.php");
 ?>

@@ -165,5 +165,5 @@ echo "
       <td width='30%' align='left'>Chambres réservées</td>
    </tr>
 </table>";
-
+include("footer.php");
 ?>

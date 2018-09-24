@@ -36,5 +36,5 @@ echo " <br>
       </td>
    </tr>
 </table>";
-
+include("footer.php");
 ?>

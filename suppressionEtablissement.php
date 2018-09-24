@@ -48,5 +48,5 @@ else
    <br><br><center><h5 style='font-size:50px'>L'établissement $nom a été supprimé<br></br>
    <a href='listeEtablissements.php?'>Retour</a></center></h5>";
 }
-
+include("footer.php");
 ?>

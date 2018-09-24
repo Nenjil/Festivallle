@@ -6,7 +6,7 @@ Idem pour background-color) */
 /* Style de base pour la page (couleur fond : ocre, couleur texte : noir) */
 .basePage
 {
-   background-color:#FFDD88;
+   background-color:white;
    color:black;
    font:11px Arial, Helvetica, sans-serif;
 }
@@ -14,7 +14,7 @@ Idem pour background-color) */
 /* Style pour le titre (couleur du texte : rouge) */
 .titre
 {
-   background-color:#FFDD88;
+   background-color:##FFF;
    color:#F50033;
    font:30px Arial, Helvetica, sans-serif;
    text-align:center;
@@ -30,7 +30,7 @@ Idem pour background-color) */
 gras et en italique) */
 .texteAccueil
 {
-   background-color:#FFDD88;
+   background-color:##FFF;
    color:#000099;
    font:14px Georgia, "Times New Roman", Times, serif;
    font-weight:bold;
@@ -49,7 +49,7 @@ td,tr
 texte centré */
 table.tabMenu td
 {
-   background-color:#DDFDFF;
+   background-color:white;
    color:black;
    border-bottom:1px solid #777777;
    border-right:1px solid #777777;
@@ -144,7 +144,7 @@ COULEUR DU TEXTE : ROSE) */
 
 .msgErreur
 {
-   background-color:#FFDD88;
+   background-color:##FFF;
    color:#000000b3;
    font-size:50px;
 }
