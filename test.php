@@ -1,6 +1,5 @@
-<?php
 
-echo '
+
 
 <!-- TITRE ET MENUS -->
 <html lang="en">
@@ -27,7 +26,7 @@ echo '
       </li>
     </ul>
   </div>
+ <div class="gh" style="width:100px;height:50px;color:black"><?php if(isset($_SESSION['name'])){ ?> <a href="prof.php"> <?php echo $_SESSION['name']; ?> </a> <?php } if(!isset($_SESSION['name'])){ ?>
+   <a href="Nouveau Formulaire/index.html" style="text-decoration:none;font-size:18px;">CONNEXION </a> <?php } ?></div>
 </nav>
-<br>';
-
-?>
+<br>
