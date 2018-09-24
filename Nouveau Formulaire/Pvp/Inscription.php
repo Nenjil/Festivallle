@@ -1,37 +1,35 @@
 <?php
-$user = 'root';  $pass = 'root';
-$dsn = 'mysql:host=localhost;dbname=forum';
+session_start();
+include_once("../../connect.php");
 
-//tentative de connexion : on crÃ©e un objet de la classe PDO
-$dbh= new PDO($dsn, $user, $pass);
-
+$bdh = connect();
 
 if(isset($_POST['inscri']))
 {
-if (!empty($_POST['pseudo']) AND !empty($_POST['mail']) AND !empty($_POST['mdp']) AND !empty($_POST['pseudo']) AND !empty($_POST['mail2']))
+if (!empty($_POST['name']) AND !empty($_POST['mail']) AND !empty($_POST['mdp'])  AND !empty($_POST['mdp2']))
 {
-$pseudo=htmlspecialchars($_POST['pseudo']);
+$pseudo=htmlspecialchars($_POST['name']);
 $mdp=sha1($_POST['mdp']);
 $mail=htmlspecialchars($_POST['mail']);
-$mail2=htmlspecialchars($_POST['mail2']);
+$mdp2=sha1($_POST['mdp2']);
 
-  if ($mail == $mail2)
+  if ($mdp == $mdp2)
     {
-    $reqmail= $dbh->prepare("SELECT * FROM kurisu WHERE mail = ?");
+    $reqmail= $dbh->prepare("SELECT * FROM associations WHERE mail = ?");
     $reqmail->execute(array($mail));
     $mailexist = $reqmail->rowCount();
 
-    $reqpseu= $dbh->prepare("SELECT * FROM kurisu WHERE pseudo = ?");
-    $reqpseu->execute(array($pseudo));
+    $reqpseu= $dbh->prepare("SELECT * FROM associations WHERE $name = ?");
+    $reqpseu->execute(array($name));
     $pseudoexist = $reqpseu->rowCount();
 
       if($mailexist == 0 AND $pseudoexist == 0)
       {
-      $insertmbr = $dbh->prepare("INSERT INTO kurisu(pseudo, mail, mdp) VALUES(?,?,?)");
-      $insertmbr->execute(array($pseudo, $mail, $mdp));
+      $insertmbr = $dbh->prepare("INSERT INTO associations(name, mail, mdp) VALUES(?,?,?)");
+      $insertmbr->execute(array($name, $mail, $mdp));
       $erreur="votre compte a bien ete creer";
       sleep(3);
-        header('Location: connect.php');
+        header('Location: ../../index.php');
       }
       else
         {
