@@ -32,7 +32,7 @@ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 
 echo "
-<table style='width:75%;margin:auto'
+<table style='width:75%;margin:auto;border-radius:20px'
 class='table-fill'>
    <tr class='enTeteTabNonQuad'>
       <td colspan='4'>Etablissements</td>

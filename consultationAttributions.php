@@ -43,7 +43,7 @@ if ($nbEtab!=0)
       $nomEtab=$lgEtab['nom'];
 
       echo "
-      <table style='width:75%;margin:auto;border;2px solid #fff' class='table table-hover table-dark'>";
+      <table style='width:75%;margin:auto;border;2px solid #fff;border-radius:20px' class='table table-hover table-dark'>";
 
       $nbOffre=$lgEtab["nombreChambresOffertes"];
       $nbOccup=obtenirNbOccup($connexion, $idEtab);
