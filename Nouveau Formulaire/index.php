@@ -19,11 +19,11 @@ input{
 	opacity: 0.35;
 }
 </style>
-
+<?php include_once("../test.php"); ?>
 <h1 style="color:white">Formulaire de connexion</h1>
 <div class="content" style="background:#0E0E0E">
-	<div class="container">
-		<img class="bg-img" src="https://www.grandvincent-marion.fr/_codepen/bg.jpg" alt="">
+	<div class="container" style="border-radius:20px;">
+		<img class="bg-img" src="https://www.nautiljon.com/images/galerie/10/25/ano_hi_mita_hana_no_namae_wo_bokutachi_wa_mada_shiranai_829152.jpg" alt="">
 			<div class="menu">
 				<a href="#connexion" class="btn-connexion"><h2>Se connecter</h2></a>
 				<a href="#enregistrer" class="btn-enregistrer active"><h2>S'inscrire</h2></a>

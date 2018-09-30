@@ -43,7 +43,7 @@
         <ul class="nav navbar-nav navbar-right">
 
           <li><?php if(isset($_SESSION['name'])){ ?> <a href="prof.php"> <?php echo $_SESSION['name']; ?> </a> <?php } if(!isset($_SESSION['name'])){ ?>
-            <a href="Nouveau Formulaire/index.html" style="text-decoration:none;font-size:18px;">CONNEXION </a> <?php } ?></li>
+            <a href="Nouveau Formulaire/index.php" style="text-decoration:none;font-size:18px;">CONNEXION </a> <?php } ?></li>
 
 
         </ul>
