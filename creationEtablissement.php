@@ -163,10 +163,10 @@ echo "
             <td><input type="text" value="'.$nombreChambresOffertes.'" name=
             "nombreChambresOffertes" size ="2" maxlength="3"></td>
          </tr>
-   </table>';
+  ';
 
    echo "
-   <table align='center' cellspacing='15' cellpadding='0'>
+
       <tr>
          <td align='right'><input type='submit' value='Valider' name='valider'>
          </td>
