@@ -24,7 +24,7 @@ $idEtab=$_REQUEST['idEtab'];
 $idGroupe=$_REQUEST['idGroupe'];
 $nbChambres=$_REQUEST['nbChambres'];
 
-echo "
+echo "<div style='background:white;'>
 <form method='POST' action='modificationAttributions.php'>
 	<input type='hidden' value='validerModifAttrib' name='action'>
    <input type='hidden' value='$idEtab' name='idEtab'>
@@ -46,6 +46,6 @@ echo "
    <input type='reset' value='Annuler' name='Annuler'><br><br>
    <a href='modificationAttributions.php?action=demanderModifAttrib'>Retour</a>
    </center>
-</form>";
+</form></div>";
 
 ?>

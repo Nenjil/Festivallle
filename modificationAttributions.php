@@ -157,6 +157,7 @@ echo "
 echo "
 <table align='center' width='80%'>
    <tr>
+   <td></td>
       <td width='34%' align='left'><a href='consultationAttributions.php'>Retour</a>
       </td>
       <td class='reserveSiLien'>&nbsp;</td>
