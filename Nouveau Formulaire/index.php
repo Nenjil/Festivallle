@@ -19,7 +19,6 @@ input{
 	opacity: 0.35;
 }
 </style>
-<?php include_once("../test.php"); ?>
 <h1 style="color:white">Formulaire de connexion</h1>
 <div class="content" style="background:#0E0E0E">
 	<div class="container" style="border-radius:20px;">
