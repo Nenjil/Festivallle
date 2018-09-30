@@ -54,26 +54,23 @@ foreach ($lgEtab as $row)
 
          <td width='16%' align='center'>
          <a href='detailEtablissement.php?id=$idx'>
-         Voir détail</a></td>
-
+         Voir détail</a></td>";
+         if (isset($_SESSION['id'])){
+           if($_SESSION['id']==$idx){
+echo "
          <td width='16%' align='center'>
          <a href='modificationEtablissement.php?action=demanderModifEtab&amp;id=$idx'>
          Modifier</a></td>";
-
+         echo "
+         <td width='16%' align='center'>
+         <a href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$idx'>
+         Supprimer</a></td>";
+       }else{
+         echo"<td></td><td></td>";
+       }
+}
          // S'il existe déjà des attributions pour l'établissement, il faudra
-         // d'abord les supprimer avant de pouvoir supprimer l'établissement
-			if (!existeAttributionsEtab($connexion, $idx))
-			{
-            echo "
-            <td width='16%' align='center'>
-            <a href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$idx'>
-            Supprimer</a></td>";
-         }
-         else
-         {
-            echo "
-            <td width='16%'>&nbsp; </td>";
-			}
+
 			echo "
       </tr>";
       $lgEtab=$rsEtab;
