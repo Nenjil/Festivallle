@@ -24,7 +24,7 @@ $idEtab=$_REQUEST['idEtab'];
 $idGroupe=$_REQUEST['idGroupe'];
 $nbChambres=$_REQUEST['nbChambres'];
 
-echo "<div style='background:white;'>
+echo "<div style='background:white;height:300;'>
 <form method='POST' action='modificationAttributions.php'>
 	<input type='hidden' value='validerModifAttrib' name='action'>
    <input type='hidden' value='$idEtab' name='idEtab'>
