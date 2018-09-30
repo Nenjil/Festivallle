@@ -25,7 +25,7 @@ $mdp2=sha1($_POST['mdp2']);
 
       if($mailexist == 0 AND $pseudoexist == 0)
       {
-      $insertmbr = $bdh->prepare("INSERT INTO associations(id, name, mail, mdp) VALUES(NULL,?,?,?)");
+      $insertmbr = $bdh->prepare("INSERT INTO associations(id, name, mail, mdp, godmod) VALUES(NULL,?,?,?,'2')");
       $insertmbr->execute(array($name, $mail, $mdp));
       $erreur="votre compte a bien ete creer";
       sleep(3);
@@ -33,6 +33,8 @@ $mdp2=sha1($_POST['mdp2']);
       }
       else
         {
+          sleep(3);
+            header('Location: ../index.php');
         $erreur="Adresse mail ou pseudo deja utiliser";
         }
 
@@ -41,6 +43,8 @@ $mdp2=sha1($_POST['mdp2']);
 }
 else
   {
+    sleep(3);
+      header('Location: ../index.php');
   $erreur="completer tous les champs";
   }
 }

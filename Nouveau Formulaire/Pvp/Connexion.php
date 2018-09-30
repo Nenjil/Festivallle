@@ -16,6 +16,7 @@ if(isset($_POST['connect'])) {
          $_SESSION['id'] = $userinfo['id'];
          $_SESSION['name'] = $userinfo['name'];
          $_SESSION['mail'] = $userinfo['mail'];
+         $_SESSION['godmod'] = $userinfo['godmod'];
          sleep(3);
         header('Location: ../../index.php');
       } else {

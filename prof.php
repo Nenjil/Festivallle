@@ -38,24 +38,27 @@ class='tabNonQuadrille'>
       <td colspan='4'>Etablissements</td>
    </tr>";
 
-
+if ($_SESSION['godmod']==2){
 $valeur=$_SESSION['name'];
-
-
-
-
-
-
 
    $req='SELECT * FROM etablissement WHERE nom='.$valeur.'  ';
    $requser = $connexion->prepare("SELECT * FROM etablissement WHERE nom= ?  ");
    $requser->execute(array($valeur));
     $sujet = $requser->fetch();
    // BOUCLE SUR LES ÉTABLISSEMENTS
+}
+else if($_SESSION['godmod']==1){
 
+  $req='SELECT * FROM etablissement';
+   $sth = $connexion->query($req);
+  $sujet = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-      $idx= $sujet['id'];
-      $nomx= $sujet['nom'];
+}
+foreach ($sujet as $sujets ) {
+  // code...
+
+      $idx= $sujets['id'];
+      $nomx= $sujets['nom'];
       echo "
 		<tr class='ligneTabNonQuad'>
          <td width='52%'>$nomx</td>
@@ -84,8 +87,8 @@ $valeur=$_SESSION['name'];
 			}
 			echo "
       </tr>";
-      $lgEtab= $sujet;
-
+      $lgEtab= $sujets;
+}
    echo "
 
 </table>";
