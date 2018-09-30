@@ -32,8 +32,8 @@ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 
 echo "
-<table width='70%' cellspacing='0' cellpadding='0' align='center'
-class='tabNonQuadrille'>
+<table style='width:75%;margin:auto'
+class='table table-hover table-dark'>
    <tr class='enTeteTabNonQuad'>
       <td colspan='4'>Etablissements</td>
    </tr>";
