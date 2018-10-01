@@ -61,10 +61,7 @@ echo "
          <td width='16%' align='center'>
          <a href='modificationEtablissement.php?action=demanderModifEtab&amp;id=$idx'>
          Modifier</a></td>";
-         echo "
-         <td width='16%' align='center'>
-         <a href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$idx'>
-         Supprimer</a></td>";
+
        }else{
          echo"<td></td><td></td>";
        }
@@ -76,10 +73,7 @@ echo "
       $lgEtab=$rsEtab;
    }
    echo "
-   <tr class='ligneTabNonQuad'>
-      <td colspan='4'><a href='creationEtablissement.php?action=demanderCreEtab'>
-      Création d'un établissement</a ></td>
-  </tr>
+
 </table>";
 include("footer.php");
 ?>

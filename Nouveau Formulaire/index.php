@@ -45,8 +45,8 @@ input{
 <form method="POST" action="Pvp/inscription.php">
 			<div class="enregistrer active-section">
 				<div class="contact-form">
-					<label>Nom d'utilisateur</label>
-					<input placeholder="" name="name" type="text">
+					<label>Nom d'etablissement</label>
+					<input placeholder="Nom d'etablissement" name="name" type="text">
 
 					<label>E-MAIL</label>
 					<input placeholder="" name="mail" type="text">
