@@ -18,7 +18,7 @@ function selectBase($connexion)
 
 function obtenirReqEtablissements()
 {
-   $req="select id, nom from Etablissement WHERE supprimer = 1 order by id";
+   $req="select id, nom, Convention from Etablissement WHERE supprimer = 1 order by id";
    return $req;
 }
 

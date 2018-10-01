@@ -59,8 +59,15 @@ echo "
          Modifier</a></td>";
 
        }else{
-         echo"<td></td><td></td>";
+         echo"<td></td>";
        }
+}
+if ($row['Convention']==1){
+  echo"
+  <td>Convention signée </td>";
+
+}else{
+  echo "<td>convention a signer </td>";
 }
          // S'il existe déjà des attributions pour l'établissement, il faudra
 

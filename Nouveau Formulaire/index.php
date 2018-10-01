@@ -32,16 +32,16 @@ input{
 			<div class="connexion">
 				<div class="contact-form">
 					<label>Identifiant</label>
-					<input placeholder="" name="name" type="text">
+					<input placeholder="Nom Etablissement" name="name" type="text">
 
 					<label>Mot de Passe</label>
-					<input placeholder="" name="mdp" type="text">
+					<input placeholder="Password" name="mdp" type="text">
 </br></br></br></br>
 					<input class="submit" value="Connexion" name="connect" type="submit">
 				</div>
 </form>
 <br> <br> <br>
-<a href="../../index.php"><button type="button" class="btn btn-primary">Primary</button></a>
+
 				<hr>
 			</div>
 <form method="POST" action="Pvp/inscription.php">
@@ -51,13 +51,13 @@ input{
 					<input placeholder="Nom d'etablissement" name="name" type="text">
 
 					<label>E-MAIL</label>
-					<input placeholder="" name="mail" type="text">
+					<input placeholder="Mail@mail.god" name="mail" type="text">
 
 					<label>Mot de Passe</label>
-					<input placeholder="" name="mdp" type="text">
+					<input placeholder="Password" name="mdp" type="text">
 
 					<label>Confirmer mot de passe</label>
-					<input placeholder="" name="mdp2" type="text">
+					<input placeholder="Confirm Password" name="mdp2" type="text">
 </br></br></br>
 					<input class="submit" value="S'inscrire" name="inscri" type="submit">
 </form>
