@@ -13,7 +13,7 @@
 
 </head>
 
-<body style="background:#0E0E0E">
+<body style="background:url('../images/ano.jpg');background-repeat:no-repeat;background-size:cover;overflow:hidden;">
 <style>
 input{
 	opacity: 0.35;
@@ -21,7 +21,7 @@ input{
 </style>
 
 <h1 style="color:white">Formulaire de connexion</h1>
-<div class="content" style="background:#0E0E0E">
+<div class="content" style="background:transparent">
 	<div class="container" style="border-radius:20px;">
 		<img class="bg-img" src="https://www.grandvincent-marion.fr/_codepen/bg.jpg" alt="">
 			<div class="menu">
@@ -40,6 +40,8 @@ input{
 					<input class="submit" value="Connexion" name="connect" type="submit">
 				</div>
 </form>
+<br> <br> <br>
+<a href="../../index.php"><button type="button" class="btn btn-primary">Primary</button></a>
 				<hr>
 			</div>
 <form method="POST" action="Pvp/inscription.php">

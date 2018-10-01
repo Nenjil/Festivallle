@@ -190,8 +190,7 @@ if ($action=='validerCreEtab')
    }
    else
    {
-      sleep(3);
-      header("Location: prof.php");
+
       echo "
       <h5 style='font-size:50px'><center>La création de l'établissement a été effectuée</center></h5>";
    }

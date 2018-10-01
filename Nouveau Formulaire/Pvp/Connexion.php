@@ -22,11 +22,11 @@ if(isset($_POST['connect'])) {
       } else {
          $erreur = "Mauvais nom d'utilisateur ou mot de passe !";
          sleep(3);
-        header('Location: ../index.html');
+        header('Location: ../index.php');
       }
    } else {
       sleep(3);
-     header('Location: ../index.html');
+     header('Location: ../index.php');
       $erreur = "Tous les champs doivent Ãªtre complÃ©tÃ©s !";
    }
 }

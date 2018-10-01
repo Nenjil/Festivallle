@@ -5,6 +5,9 @@ div.table-title {
   padding:5px;
   width: 100%;
 }
+table tr td.reserve{
+  background: red;
+}
 
 .table-title h3 {
    color: #fafafa;
@@ -55,6 +58,7 @@ th:last-child {
 }
 
 tr {
+
   border-top: 1px solid #C1C3D1;
   border-bottom-: 1px solid #C1C3D1;
   color:#666B85;
@@ -80,6 +84,7 @@ tr:last-child {
 tr:nth-child(odd) td {
   background:#EBEBEB;
 }
+
 
 tr:nth-child(odd):hover td {
   /*background:#4E5066;*/

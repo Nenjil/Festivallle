@@ -19,10 +19,6 @@ if (!selectBase($connexion))
 }
 
 
-$sql = 'SELECT * FROM groupe';
-$sth = $connexion->query($sql);
-$result = $sth->fetchAll(PDO::FETCH_ASSOC);
-
 //<!--print_r($result);-->
 
 

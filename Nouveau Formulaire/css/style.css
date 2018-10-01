@@ -161,7 +161,19 @@ input.submit {
     background-color: #1161EE;
     cursor: pointer;
 }
-
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button1 {
+    background-color: transparent;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+}
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
 
 .path-moving,
 .path-back {
