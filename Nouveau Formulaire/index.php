@@ -16,7 +16,7 @@
 <body style="background:url('../images/ano.jpg');background-repeat:no-repeat;background-size:cover;overflow:hidden;">
 <style>
 input{
-	opacity: 0.35;
+	opacity: 5;
 }
 </style>
 

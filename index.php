@@ -14,7 +14,7 @@ durant le festival Folklores du Monde.
   -Gérer les établissements (caractéristiques et capacités d'accueil) acceptant d'héberger les groupes de musiciens.
   <br>
   -Consulter, réaliser ou modifier les attributions des chambres aux groupes dans les établissements.
-  <span>ET?RG</span>
+  <span>ET,RG</span>
 </blockquote>";
 
 
