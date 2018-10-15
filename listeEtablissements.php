@@ -19,10 +19,6 @@ if (!selectBase($connexion))
 }
 
 
-$sql = 'SELECT * FROM groupe';
-$sth = $connexion->query($sql);
-$result = $sth->fetchAll(PDO::FETCH_ASSOC);
-
 //<!--print_r($result);-->
 
 
@@ -32,8 +28,8 @@ $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 
 echo "
-<table width='70%' cellspacing='0' cellpadding='0' align='center'
-class='tabNonQuadrille'>
+<table style='width:75%;margin:auto;border-radius:20px'
+class='table-fill'>
    <tr class='enTeteTabNonQuad'>
       <td colspan='4'>Etablissements</td>
    </tr>";
@@ -54,35 +50,33 @@ foreach ($lgEtab as $row)
 
          <td width='16%' align='center'>
          <a href='detailEtablissement.php?id=$idx'>
-         Voir détail</a></td>
-
+         Voir détail</a></td>";
+         if (isset($_SESSION['id'])){
+           if($_SESSION['id']==$idx){
+echo "
          <td width='16%' align='center'>
          <a href='modificationEtablissement.php?action=demanderModifEtab&amp;id=$idx'>
          Modifier</a></td>";
 
+       }else{
+         echo"<td></td>";
+       }
+}
+if ($row['Convention']==1){
+  echo"
+  <td>Convention signée </td>";
+
+}else{
+  echo "<td>convention a signer </td>";
+}
          // S'il existe déjà des attributions pour l'établissement, il faudra
-         // d'abord les supprimer avant de pouvoir supprimer l'établissement
-			if (!existeAttributionsEtab($connexion, $idx))
-			{
-            echo "
-            <td width='16%' align='center'>
-            <a href='suppressionEtablissement.php?action=demanderSupprEtab&amp;id=$idx'>
-            Supprimer</a></td>";
-         }
-         else
-         {
-            echo "
-            <td width='16%'>&nbsp; </td>";
-			}
+
 			echo "
       </tr>";
       $lgEtab=$rsEtab;
    }
    echo "
-   <tr class='ligneTabNonQuad'>
-      <td colspan='4'><a href='creationEtablissement.php?action=demanderCreEtab'>
-      Création d'un établissement</a ></td>
-  </tr>
+
 </table>";
 include("footer.php");
 ?>

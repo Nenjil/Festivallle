@@ -18,7 +18,7 @@ function selectBase($connexion)
 
 function obtenirReqEtablissements()
 {
-   $req="select id, nom from Etablissement order by id";
+   $req="select id, nom, Convention from Etablissement WHERE supprimer = 1 order by id";
    return $req;
 }
 
@@ -45,7 +45,7 @@ function obtenirDetailEtablissement($connexion, $id)
 
 function supprimerEtablissement($connexion, $id)
 {
-   $req="delete from Etablissement where id='$id'";
+   $req="UPDATE Etablissement SET supprimer = 0 where id='$id'";
    $connexion->query($req);
    return $connexion;
 }
@@ -88,7 +88,7 @@ function creerEtablissement($connexion, $id, $nom, $adresseRue, $codePostal,
    $req="insert into Etablissement values ('$id', '$nom', '$adresseRue',
          '$codePostal', '$ville', '$tel', '$adresseElectronique', '$type',
          '$civiliteResponsable', '$nomResponsable', '$prenomResponsable',
-         '$nombreChambresOffertes')";
+         '$nombreChambresOffertes','1')";
 
          $connexion->query($req);
          return $connexion;

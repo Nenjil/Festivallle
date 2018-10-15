@@ -80,6 +80,7 @@ echo "
       </tr>
       <tr>
          <td><input type='hidden' value='$id' name='id'></td>
+         <td></td>
       </tr>";
 
       echo '
@@ -162,12 +163,12 @@ echo "
             <td><input type="text" value="'.$nombreChambresOffertes.'" name=
             "nombreChambresOffertes" size ="2" maxlength="3"></td>
          </tr>
-   </table>';
+   ';
 
    echo "
-   <table align='center' cellspacing='15' cellpadding='0'>
+
       <tr>
-         <td align='right'><input type='submit' value='Valider' name='valider'>
+         <td align='right' ><input type='submit' value='Valider' name='valider'>
          </td>
          <td align='left'><input type='reset' value='Annuler' name='annuler'>
          </td>

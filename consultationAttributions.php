@@ -26,10 +26,10 @@ $nbEtab=obtenirNbEtabOffrantChambres($connexion);
 if ($nbEtab!=0)
 {
    echo "
-   <table width='75%' cellspacing='0' cellpadding='0' align='center'
-   <tr><td>
+<div style='margin-left:13%'>
    <a href='modificationAttributions.php?action=demanderModifAttrib'>
-   Effectuer ou modifier les attributions</a></td></tr></table><br><br>";
+   <button type='button' class='btn btn-success'>Effectuer ou modifier les attributions</button></a>
+</div><br><br>";
 
    // POUR CHAQUE ÉTABLISSEMENT : AFFICHAGE D'UN TABLEAU COMPORTANT 2 LIGNES
    // D'EN-TÊTE ET LE DÉTAIL DES ATTRIBUTIONS
@@ -43,8 +43,7 @@ if ($nbEtab!=0)
       $nomEtab=$lgEtab['nom'];
 
       echo "
-      <table width='75%' cellspacing='0' cellpadding='0' align='center'
-      class='tabQuadrille'>";
+      <table style='width:75%;margin:auto;border;2px solid #fff;border-radius:20px' class='table table-hover table-dark'>";
 
       $nbOffre=$lgEtab["nombreChambresOffertes"];
       $nbOccup=obtenirNbOccup($connexion, $idEtab);

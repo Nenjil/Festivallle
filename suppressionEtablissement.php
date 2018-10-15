@@ -29,13 +29,13 @@ $nom=$lgEtab['nom'];
 
 if ($_REQUEST['action']=='demanderSupprEtab')
 {
-   echo "
+   echo "<div style='background:white;height:400px;'>
    <br><center><h5 style='font-size:50px'>Souhaitez-vous vraiment supprimer l'établissement $nom ?
    <br><br>
    <a href='suppressionEtablissement.php?action=validerSupprEtab&amp;id=$id'>
    Oui</a>&nbsp; &nbsp; &nbsp; &nbsp;
    <a href='listeEtablissements.php?'>Non</a></h5></center>
-   </h5>";
+   </h5></div>";
 
 }
 

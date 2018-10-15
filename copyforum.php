@@ -23,9 +23,9 @@ if(isset($_POST['connect'])) {
 
 
 
-          $sql = '';
-          $sth = $bd->query($sql);
-          $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+      $sql = '';
+      $sth = $bd->query($sql);
+      $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
 
 

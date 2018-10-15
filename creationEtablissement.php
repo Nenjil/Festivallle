@@ -163,10 +163,10 @@ echo "
             <td><input type="text" value="'.$nombreChambresOffertes.'" name=
             "nombreChambresOffertes" size ="2" maxlength="3"></td>
          </tr>
-   </table>';
+  ';
 
    echo "
-   <table align='center' cellspacing='15' cellpadding='0'>
+
       <tr>
          <td align='right'><input type='submit' value='Valider' name='valider'>
          </td>
@@ -190,6 +190,7 @@ if ($action=='validerCreEtab')
    }
    else
    {
+
       echo "
       <h5 style='font-size:50px'><center>La création de l'établissement a été effectuée</center></h5>";
    }

@@ -1,166 +1,175 @@
-/* FEUILLE DE STYLES POUR TOUS LES STYLES DE L'APPLICATION
-(Remarque : à plusieurs reprises, l'attribut color:black est précisé bien qu'il
-ne soit pas utile ; ceci permet une validation du W3C sans avertissement.
-Idem pour background-color) */
-
-/* Style de base pour la page (couleur fond : ocre, couleur texte : noir) */
-.basePage
-{
-   background-color:white;
-   color:black;
-   font:11px Arial, Helvetica, sans-serif;
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+table tr td.reserve{
+  background: red;
 }
 
-/* Style pour le titre (couleur du texte : rouge) */
-.titre
-{
-   background-color:##FFF;
-   color:#F50033;
-   font:30px Arial, Helvetica, sans-serif;
-   text-align:center;
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
 }
 
-/* Style pour le texte de 2ème niveau du titre */
-.texteNiveau2
-{
-   font:20px Arial, Helvetica, sans-serif;
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
 }
 
-/* Style pour le texte de la page d'accueil (couleur : bleu foncé avec mise en
-gras et en italique) */
-.texteAccueil
-{
-   background-color:##FFF;
-   color:#000099;
-   font:14px Georgia, "Times New Roman", Times, serif;
-   font-weight:bold;
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
 }
 
-/* Style pour le texte dans les différentes balises citées */
-td,tr
-{
-   font:11px Arial, Helvetica, sans-serif;
+th:first-child {
+  border-top-left-radius:3px;
 }
 
-/* STYLES POUR LES MENUS */
-
-/* Style du tableau contenant les éléments de menu : fond bleu ciel, épaisseur
-1px, espacement de 3x entre la bordure gauche de chaque cellule et le texte et
-texte centré */
-table.tabMenu td
-{
-   background-color:white;
-   color:black;
-   border-bottom:1px solid #777777;
-   border-right:1px solid #777777;
-   border-left:1px solid #777777;
-   border-top:1px solid #777777;
-   padding-left:3px;
-   width:33%;
-   height:18px;
-   text-align:center;
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
 }
 
-/* Style pour les éléments du menu (mise en gras et italique) */
-.menu
-{
-   font:11px Georgia, "Times New Roman", Times, serif;
-   font-weight:bold;
-   font-style:italic;
-   text-align:left;
+tr {
+
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
 
-/* STYLES POUR LES TABLEAUX QUADRILLÉS */
-
-/* Style des tableaux avec quadrillage : épaisseur du quadrillage 1px,
-espacement de 3x entre la bordure gauche de chaque cellule et le texte */
-table.tabQuadrille td
-{
-   border-bottom:1px solid #777777;
-   border-right:1px solid #777777;
-   border-left:1px solid #777777;
-   border-top:1px #777777;
-   padding-left:3px;
+tr:hover td {
+/*background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;*/
 }
 
-/* Style pour la 1ère ligne d'en-tête des tableaux quadrillés : fond avec
-nuances de jaune et texte centré */
-tr.enTeteTabQuad
-{
-   background-image:url('../images/xpBarre.jpg');
-   height:21px;
-   text-align:center;
+tr:first-child {
+  border-top:none;
 }
 
-/* Style pour les lignes (autres que la 1ère ligne d'en-tête) des tableaux
-quadrillés : fond écru et texte centré */
-tr.ligneTabQuad
-{
-   background-color:#FFFFE0;
-   text-align:center;
-   color:black;
+tr:last-child {
+  border-bottom:none;
 }
 
-/* STYLES POUR LES TABLEAUX NON QUADRILLÉS */
-
-/* Style des tableaux sans quadrillage : fond écru, épaisseur de la bordure
-1px */
-table.tabNonQuadrille
-{
-   background-color:#FFFFE0;
-   border-bottom:1px solid #777777;
-   border-right:1px solid #777777;
-   border-left:1px solid #777777;
-   border-top:1px #777777;
-   color:black;
+tr:nth-child(odd) td {
+  background:#EBEBEB;
 }
 
-/* Style pour la ligne d'en-tête des tableaux non quadrillés : fond avec
-nuances de jaune, texte centré et en gras et trait bas pour séparer l'en-tête du
-corps du tableau */
-tr.enTeteTabNonQuad td
-{
-   background-image:url('../images/xpBarre.jpg');
-   height:21px;
-   text-align:center;
-   font-weight:bold;
-   border-bottom:1px solid #777777;
+
+tr:nth-child(odd):hover td {
+  /*background:#4E5066;*/
 }
 
-/* Style pour les lignes (autres que la 1ère ligne d'en-tête) des tableaux non
-quadrillés : fond écru, hauteur plus importante, texte aligné à gauche et
-espacement de 3px entre la bordure gauche de chaque cellule et le texte */
-tr.ligneTabNonQuad td
-{
-   background-color:#FFFFE0;
-   height:28px;
-   text-align:left;
-   padding-left:3px;
-   color:black;
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
 }
 
-/* STYLE POUR LES MESSAGES D'ERREUR AFFICHÉS EN BAS DE PAGE (FOND : OCRE,
-COULEUR DU TEXTE : ROSE) */
-
-.msgErreur
-{
-   background-color:##FFF;
-   color:#000000b3;
-   font-size:50px;
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
 }
 
-/* STYLES POUR LES ATTRIBUTIONS */
-
-/* Fond blanc */
-td.reserveSiLien
-{
-   background-color:#FFFFFF;
-   color:black;
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
 }
 
-/* Fond parme */
-td.reserve
-{
-   background-color:#FFBEFF;
-   color:black;
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 1.4em;
+  width:60%;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid grey;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:grey;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
 }

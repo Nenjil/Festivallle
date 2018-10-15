@@ -88,11 +88,9 @@ class='tabNonQuadrille'>
       <td> Offre: </td>
       <td>$nombreChambresOffertes&nbsp;chambre(s)</td>
    </tr>
-</table>
-<table align='center'>
    <tr>
       <td align='center'><a href='listeEtablissements.php'>Retour</a>
-      </td>
+      </td><td></td>
    </tr>
 </table>";
 ?>
